@@ -1,0 +1,300 @@
+.:
+total 85
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:48 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089   223 Jun 27 19:45 Readme.txt
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 assets/
+-rw-r--r-- 1 calmond1 1049089     0 Jun 27 19:48 devfolio_content.txt
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 forms/
+-rw-r--r-- 1 calmond1 1049089 42452 Jun 27 19:45 index.html
+-rw-r--r-- 1 calmond1 1049089 10105 Jun 27 19:45 portfolio-details.html
+-rw-r--r-- 1 calmond1 1049089  8388 Jun 27 19:45 service-details.html
+-rw-r--r-- 1 calmond1 1049089  6250 Jun 27 19:45 starter-page.html
+
+./assets:
+total 16
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:48 ../
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 css/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 img/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 js/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 scss/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 vendor/
+
+./assets/css:
+total 36
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 35553 Jun 27 19:45 main.css
+
+./assets/img:
+total 744
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089   7489 Jun 27 19:45 apple-touch-icon.png
+-rw-r--r-- 1 calmond1 1049089   1156 Jun 27 19:45 favicon.png
+-rw-r--r-- 1 calmond1 1049089  69999 Jun 27 19:45 hero-img.jpg
+-rw-r--r-- 1 calmond1 1049089   3432 Jun 27 19:45 logo.png
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 portfolio/
+-rw-r--r-- 1 calmond1 1049089  34651 Jun 27 19:45 profile-img.jpg
+-rw-r--r-- 1 calmond1 1049089  54414 Jun 27 19:45 services.jpg
+-rw-r--r-- 1 calmond1 1049089 204076 Jun 27 19:45 stats-bg.jpg
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 testimonials/
+-rw-r--r-- 1 calmond1 1049089 358976 Jun 27 19:45 testimonials-bg.jpg
+
+./assets/img/portfolio:
+total 760
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 67064 Jun 27 19:45 app-1.jpg
+-rw-r--r-- 1 calmond1 1049089 73871 Jun 27 19:45 app-2.jpg
+-rw-r--r-- 1 calmond1 1049089 42308 Jun 27 19:45 app-3.jpg
+-rw-r--r-- 1 calmond1 1049089 80146 Jun 27 19:45 books-1.jpg
+-rw-r--r-- 1 calmond1 1049089 60824 Jun 27 19:45 books-2.jpg
+-rw-r--r-- 1 calmond1 1049089 91462 Jun 27 19:45 books-3.jpg
+-rw-r--r-- 1 calmond1 1049089 25514 Jun 27 19:45 branding-1.jpg
+-rw-r--r-- 1 calmond1 1049089 52305 Jun 27 19:45 branding-2.jpg
+-rw-r--r-- 1 calmond1 1049089 77892 Jun 27 19:45 branding-3.jpg
+-rw-r--r-- 1 calmond1 1049089 62035 Jun 27 19:45 product-1.jpg
+-rw-r--r-- 1 calmond1 1049089 89298 Jun 27 19:45 product-2.jpg
+-rw-r--r-- 1 calmond1 1049089 20090 Jun 27 19:45 product-3.jpg
+
+./assets/img/testimonials:
+total 172
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 39727 Jun 27 19:45 testimonials-1.jpg
+-rw-r--r-- 1 calmond1 1049089 57584 Jun 27 19:45 testimonials-2.jpg
+-rw-r--r-- 1 calmond1 1049089 17247 Jun 27 19:45 testimonials-3.jpg
+-rw-r--r-- 1 calmond1 1049089 20220 Jun 27 19:45 testimonials-4.jpg
+-rw-r--r-- 1 calmond1 1049089 22595 Jun 27 19:45 testimonials-5.jpg
+
+./assets/js:
+total 8
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 7151 Jun 27 19:45 main.js
+
+./assets/scss:
+total 24
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 1528 Jun 27 19:45 _sections.scss
+-rw-r--r-- 1 calmond1 1049089 3090 Jun 27 19:45 _variables.scss
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 layouts/
+-rw-r--r-- 1 calmond1 1049089  528 Jun 27 19:45 main.scss
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 sections/
+
+./assets/scss/layouts:
+total 41
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089  301 Jun 27 19:45 _aos.scss
+-rw-r--r-- 1 calmond1 1049089 1078 Jun 27 19:45 _footer.scss
+-rw-r--r-- 1 calmond1 1049089 1604 Jun 27 19:45 _general.scss
+-rw-r--r-- 1 calmond1 1049089  685 Jun 27 19:45 _header.scss
+-rw-r--r-- 1 calmond1 1049089 5259 Jun 27 19:45 _navmenu.scss
+-rw-r--r-- 1 calmond1 1049089  880 Jun 27 19:45 _page-titles.scss
+-rw-r--r-- 1 calmond1 1049089  778 Jun 27 19:45 _preloader.scss
+-rw-r--r-- 1 calmond1 1049089  705 Jun 27 19:45 _scrolltop.scss
+
+./assets/scss/sections:
+total 57
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 1494 Jun 27 19:45 _about.scss
+-rw-r--r-- 1 calmond1 1049089 2049 Jun 27 19:45 _contact.scss
+-rw-r--r-- 1 calmond1 1049089 1891 Jun 27 19:45 _faq.scss
+-rw-r--r-- 1 calmond1 1049089 1008 Jun 27 19:45 _hero.scss
+-rw-r--r-- 1 calmond1 1049089 3646 Jun 27 19:45 _portfolio-details.scss
+-rw-r--r-- 1 calmond1 1049089 1994 Jun 27 19:45 _portfolio.scss
+-rw-r--r-- 1 calmond1 1049089  523 Jun 27 19:45 _pricing.scss
+-rw-r--r-- 1 calmond1 1049089 1219 Jun 27 19:45 _resume.scss
+-rw-r--r-- 1 calmond1 1049089 1335 Jun 27 19:45 _service-details.scss
+-rw-r--r-- 1 calmond1 1049089 1223 Jun 27 19:45 _services.scss
+-rw-r--r-- 1 calmond1 1049089  227 Jun 27 19:45 _starter-section.scss
+-rw-r--r-- 1 calmond1 1049089  980 Jun 27 19:45 _stats.scss
+-rw-r--r-- 1 calmond1 1049089 2262 Jun 27 19:45 _testimonials.scss
+
+./assets/vendor:
+total 20
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ../
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 aos/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 bootstrap/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 bootstrap-icons/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 glightbox/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 imagesloaded/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 isotope-layout/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 php-email-form/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 purecounter/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 swiper/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 typed.js/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 waypoints/
+
+./assets/vendor/aos:
+total 152
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 19941 Jun 27 19:45 aos.cjs.js
+-rw-r--r-- 1 calmond1 1049089 28765 Jun 27 19:45 aos.css
+-rw-r--r-- 1 calmond1 1049089 19768 Jun 27 19:45 aos.esm.js
+-rw-r--r-- 1 calmond1 1049089 13800 Jun 27 19:45 aos.js
+-rw-r--r-- 1 calmond1 1049089 56459 Jun 27 19:45 aos.js.map
+
+./assets/vendor/bootstrap:
+total 16
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ../
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 css/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 js/
+
+./assets/vendor/bootstrap/css:
+total 6080
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089  70323 Jun 27 19:45 bootstrap-grid.css
+-rw-r--r-- 1 calmond1 1049089 203340 Jun 27 19:45 bootstrap-grid.css.map
+-rw-r--r-- 1 calmond1 1049089  51789 Jun 27 19:45 bootstrap-grid.min.css
+-rw-r--r-- 1 calmond1 1049089 115912 Jun 27 19:45 bootstrap-grid.min.css.map
+-rw-r--r-- 1 calmond1 1049089  70397 Jun 27 19:45 bootstrap-grid.rtl.css
+-rw-r--r-- 1 calmond1 1049089 203344 Jun 27 19:45 bootstrap-grid.rtl.css.map
+-rw-r--r-- 1 calmond1 1049089  51864 Jun 27 19:45 bootstrap-grid.rtl.min.css
+-rw-r--r-- 1 calmond1 1049089 115989 Jun 27 19:45 bootstrap-grid.rtl.min.css.map
+-rw-r--r-- 1 calmond1 1049089  12156 Jun 27 19:45 bootstrap-reboot.css
+-rw-r--r-- 1 calmond1 1049089 129863 Jun 27 19:45 bootstrap-reboot.css.map
+-rw-r--r-- 1 calmond1 1049089  10205 Jun 27 19:45 bootstrap-reboot.min.css
+-rw-r--r-- 1 calmond1 1049089  51660 Jun 27 19:45 bootstrap-reboot.min.css.map
+-rw-r--r-- 1 calmond1 1049089  12149 Jun 27 19:45 bootstrap-reboot.rtl.css
+-rw-r--r-- 1 calmond1 1049089 129878 Jun 27 19:45 bootstrap-reboot.rtl.css.map
+-rw-r--r-- 1 calmond1 1049089  10277 Jun 27 19:45 bootstrap-reboot.rtl.min.css
+-rw-r--r-- 1 calmond1 1049089  64328 Jun 27 19:45 bootstrap-reboot.rtl.min.css.map
+-rw-r--r-- 1 calmond1 1049089 107938 Jun 27 19:45 bootstrap-utilities.css
+-rw-r--r-- 1 calmond1 1049089 267983 Jun 27 19:45 bootstrap-utilities.css.map
+-rw-r--r-- 1 calmond1 1049089  85457 Jun 27 19:45 bootstrap-utilities.min.css
+-rw-r--r-- 1 calmond1 1049089 180636 Jun 27 19:45 bootstrap-utilities.min.css.map
+-rw-r--r-- 1 calmond1 1049089 107806 Jun 27 19:45 bootstrap-utilities.rtl.css
+-rw-r--r-- 1 calmond1 1049089 267924 Jun 27 19:45 bootstrap-utilities.rtl.css.map
+-rw-r--r-- 1 calmond1 1049089  85386 Jun 27 19:45 bootstrap-utilities.rtl.min.css
+-rw-r--r-- 1 calmond1 1049089 180472 Jun 27 19:45 bootstrap-utilities.rtl.min.css.map
+-rw-r--r-- 1 calmond1 1049089 280311 Jun 27 19:45 bootstrap.css
+-rw-r--r-- 1 calmond1 1049089 680938 Jun 27 19:45 bootstrap.css.map
+-rw-r--r-- 1 calmond1 1049089 232111 Jun 27 19:45 bootstrap.min.css
+-rw-r--r-- 1 calmond1 1049089 590038 Jun 27 19:45 bootstrap.min.css.map
+-rw-r--r-- 1 calmond1 1049089 279526 Jun 27 19:45 bootstrap.rtl.css
+-rw-r--r-- 1 calmond1 1049089 680798 Jun 27 19:45 bootstrap.rtl.css.map
+-rw-r--r-- 1 calmond1 1049089 232219 Jun 27 19:45 bootstrap.rtl.min.css
+-rw-r--r-- 1 calmond1 1049089 589235 Jun 27 19:45 bootstrap.rtl.min.css.map
+
+./assets/vendor/bootstrap/js:
+total 2476
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 207836 Jun 27 19:45 bootstrap.bundle.js
+-rw-r--r-- 1 calmond1 1049089 431870 Jun 27 19:45 bootstrap.bundle.js.map
+-rw-r--r-- 1 calmond1 1049089  80496 Jun 27 19:45 bootstrap.bundle.min.js
+-rw-r--r-- 1 calmond1 1049089 332111 Jun 27 19:45 bootstrap.bundle.min.js.map
+-rw-r--r-- 1 calmond1 1049089 135902 Jun 27 19:45 bootstrap.esm.js
+-rw-r--r-- 1 calmond1 1049089 297005 Jun 27 19:45 bootstrap.esm.js.map
+-rw-r--r-- 1 calmond1 1049089  73811 Jun 27 19:45 bootstrap.esm.min.js
+-rw-r--r-- 1 calmond1 1049089 222322 Jun 27 19:45 bootstrap.esm.min.js.map
+-rw-r--r-- 1 calmond1 1049089 145474 Jun 27 19:45 bootstrap.js
+-rw-r--r-- 1 calmond1 1049089 298167 Jun 27 19:45 bootstrap.js.map
+-rw-r--r-- 1 calmond1 1049089  60539 Jun 27 19:45 bootstrap.min.js
+-rw-r--r-- 1 calmond1 1049089 220618 Jun 27 19:45 bootstrap.min.js.map
+
+./assets/vendor/bootstrap-icons:
+total 308
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 99556 Jun 27 19:45 bootstrap-icons.css
+-rw-r--r-- 1 calmond1 1049089 53043 Jun 27 19:45 bootstrap-icons.json
+-rw-r--r-- 1 calmond1 1049089 87008 Jun 27 19:45 bootstrap-icons.min.css
+-rw-r--r-- 1 calmond1 1049089 58496 Jun 27 19:45 bootstrap-icons.scss
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 fonts/
+
+./assets/vendor/bootstrap-icons/fonts:
+total 316
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 180288 Jun 27 19:45 bootstrap-icons.woff
+-rw-r--r-- 1 calmond1 1049089 134044 Jun 27 19:45 bootstrap-icons.woff2
+
+./assets/vendor/glightbox:
+total 4
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 ../
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 css/
+drwxr-xr-x 1 calmond1 1049089 0 Jun 27 19:45 js/
+
+./assets/vendor/glightbox/css:
+total 36
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 17372 Jun 27 19:45 glightbox.css
+-rw-r--r-- 1 calmond1 1049089 13749 Jun 27 19:45 glightbox.min.css
+
+./assets/vendor/glightbox/js:
+total 164
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 109549 Jun 27 19:45 glightbox.js
+-rw-r--r-- 1 calmond1 1049089  56343 Jun 27 19:45 glightbox.min.js
+
+./assets/vendor/imagesloaded:
+total 12
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 5485 Jun 27 19:45 imagesloaded.pkgd.min.js
+
+./assets/vendor/isotope-layout:
+total 132
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 91398 Jun 27 19:45 isotope.pkgd.js
+-rw-r--r-- 1 calmond1 1049089 35445 Jun 27 19:45 isotope.pkgd.min.js
+
+./assets/vendor/php-email-form:
+total 252
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 246579 Jun 27 19:45 php-email-form.php
+-rw-r--r-- 1 calmond1 1049089   2735 Jun 27 19:45 validate.js
+
+./assets/vendor/purecounter:
+total 40
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089  5417 Jun 27 19:45 purecounter_vanilla.js
+-rw-r--r-- 1 calmond1 1049089 24750 Jun 27 19:45 purecounter_vanilla.js.map
+
+./assets/vendor/swiper:
+total 388
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089      0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089  18454 Jun 27 19:45 swiper-bundle.min.css
+-rw-r--r-- 1 calmond1 1049089 154597 Jun 27 19:45 swiper-bundle.min.js
+-rw-r--r-- 1 calmond1 1049089 209845 Jun 27 19:45 swiper-bundle.min.js.map
+
+./assets/vendor/typed.js:
+total 164
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 10476 Jun 27 19:45 typed.cjs
+-rw-r--r-- 1 calmond1 1049089 38753 Jun 27 19:45 typed.cjs.map
+-rw-r--r-- 1 calmond1 1049089 10490 Jun 27 19:45 typed.module.js
+-rw-r--r-- 1 calmond1 1049089 38764 Jun 27 19:45 typed.module.js.map
+-rw-r--r-- 1 calmond1 1049089 10646 Jun 27 19:45 typed.umd.js
+-rw-r--r-- 1 calmond1 1049089 38755 Jun 27 19:45 typed.umd.js.map
+
+./assets/vendor/waypoints:
+total 28
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089     0 Jun 27 19:45 ../
+-rw-r--r-- 1 calmond1 1049089 21112 Jun 27 19:45 noframework.waypoints.js
+
+./forms:
+total 8
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:45 ./
+drwxr-xr-x 1 calmond1 1049089    0 Jun 27 19:48 ../
+-rw-r--r-- 1 calmond1 1049089 1341 Jun 27 19:45 contact.php

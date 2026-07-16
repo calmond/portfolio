@@ -1,0 +1,169 @@
+/* ==========================================================
+   Projects Section
+   ----------------------------------------------------------
+   Displays project case studies as architect-focused cards.
+   ========================================================== */
+
+.projects {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  
+  :root {
+    --anchor-offset: 120px;
+  }
+
+  .project-section,
+  .project-overview {
+    scroll-margin-top: var(--anchor-offset);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 65%);
+  }
+
+  .project-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  }
+
+  .project-card-header i {
+    font-size: 1.45rem;
+    color: var(--accent-color);
+  }
+
+  .project-card-label {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+  }
+
+  .project-card-body {
+    flex: 1;
+    padding: 1.35rem 1.25rem;
+  }
+
+  .project-card-body h3 {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+  }
+
+  .project-card-body p {
+    margin-bottom: 1rem;
+    font-size: .95rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+  }
+
+  .project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    .project-tag {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
+      color: var(--default-color);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 72%);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .03em;
+      padding: .4rem .75rem;
+    }
+  }
+  
+  .project-card-footer {
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+    border-top: 1px solid
+        color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .project-card-footer a {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+  }
+
+  .project-card-footer a i {
+    transition: transform .2s ease;
+  }
+
+  .project-card-footer a:hover i {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 991px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project-philosophy {
+	padding-top: 3rem;
+
+	.project-philosophy-content {
+	  padding: 2rem;
+	  border-radius: 16px;
+	  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+	  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 82%);
+	}
+
+	h2 {
+	  margin-bottom: 1rem;
+	}
+
+	.lead {
+	  font-size: 1.15rem;
+	  font-weight: 500;
+	  color: var(--heading-color);
+	}
+
+	p {
+	  line-height: 1.7;
+	}
+
+	.philosophy-points {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  gap: 1.25rem;
+	  margin-top: 1.75rem;
+	}
+
+	.philosophy-points h3 {
+	  font-size: 1rem;
+	  margin-bottom: .4rem;
+	}
+
+	.philosophy-points p {
+	  font-size: .92rem;
+	  margin: 0;
+	  color: color-mix(in srgb, var(--default-color), transparent 25%);
+    }
+  }
+}

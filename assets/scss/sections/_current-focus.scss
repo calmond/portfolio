@@ -1,0 +1,81 @@
+/* ==========================================================
+   Current Focus Section
+   ----------------------------------------------------------
+   Displays current projects, research, writing, and goals.
+ ========================================================== */
+   
+.current-focus {
+	.current-focus-card {
+	  background: var(--surface-color);
+	  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+	  border-radius: 14px;
+	  overflow: hidden;
+	  box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+	}
+
+	.current-focus-card-header {
+	  display: flex;
+	  align-items: center;
+	  gap: .75rem;
+	  padding: 1rem 1.25rem;
+	  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+	  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+	}
+
+	.current-focus-card-header i {
+	  font-size: 1.35rem;
+	  color: var(--accent-color);
+	}
+
+	.current-focus-card-header h3 {
+	  margin: 0;
+	  font-size: 1.1rem;
+	}
+
+	.current-focus-card-body {
+	  padding: 1.25rem;
+	}
+
+	.current-focus-item + .current-focus-item {
+	  margin-top: 1.15rem;
+	  padding-top: 1.15rem;
+	  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+	}
+
+	.current-focus-item h4 {
+	  font-size: 1rem;
+	  margin-bottom: .35rem;
+	}
+
+	.current-focus-item p,
+	.current-focus-note {
+	  margin: 0;
+	  font-size: .93rem;
+	  line-height: 1.55;
+	  color: color-mix(in srgb, var(--default-color), transparent 25%);
+	}
+
+	.current-focus-tag-list {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: .65rem;
+	  margin-bottom: 1rem;
+	}
+
+	.current-focus-tag-list span {
+	  padding: .45rem .7rem;
+	  border-radius: 999px;
+	  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+	  color: var(--default-color);
+	  font-size: .9rem;
+	}
+
+	.current-focus-checklist {
+	  margin: 0;
+	  padding-left: 1.2rem;
+	}
+
+	.current-focus-checklist li {
+	  margin-bottom: .65rem;
+	}
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Pulse</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="projects-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <div class="sitename">
+			<h1>Charles Almond</h1>
+			<h5>Designing systems that improve the way software is built.</h5>
+		</div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home<br></a></li>
+		  <li><a href="index.html">Projects Overview<br></a></li>
+		  <li><a href="project-pulse.html" class="active">Project Pulse<br></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+	  <section id="project-detail" class="project-detail section">
+	  
+	  <div class="container section-title" data-aos="fade-up">
+		<h1 id="top" class="text-primary">Project Pulse</h1>
+		<p>
+		A configurable software analysis framework that evaluates partially completed 
+		<br>
+		Java applications through a secure, extensible assessment pipeline while
+		<br>
+		preserving an authentic IDE-based development workflow.
+		</p>
+	  </div>
+	  
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+	    <p>
+		  Jump to
+		  <ul>
+		    <li><a href="#overview">Overview</a></li>
+			<li><a href="#problem">Problem</a></li>
+			<li><a href="#solution">Solution</a></li>
+			<li><a href="#system-architecture">System Architecture</a></li>
+			<li><a href="#design-tradeoffs">Design Tradeoffs</a></li>
+			<li><a href="#lessons-learned">Lessons Learned</a></li>
+			<li><a href="#conclusion">Conclusion</a></li>
+			<li><a href="#tech-stack">Technology Stack</a></li>
+		  </ul>
+		</p>
+	  </div>
+	  <div class="container" data-aos="fade-up" data-aos-delay="200">
+		<div id="overview" class="project-overview">
+		  <div>
+			<h2 id="overview" class="bi bi-card-list text-primary">&nbsp; Overview</h2>
+			<p>
+			  Most automated programming assessment platforms require students to work within a browser-based environment, while traditional unit tests assume an application is already complete before meaningful feedback can be produced. Both approaches differ significantly from the incremental, IDE-based workflow used in professional software development. 
+			</p>
+			<p>
+			  ProjectPulse addresses this by providing an automated assessment platform that runs alongside the student's IDE, using reflection, behavioral testing, JSON-driven test definitions, and reporting to deliver immediate feedback as students incrementally implement their solution, while preserving an authentic development experience.
+			</p>
+			<p>
+			  ProjectPulse does not perform implementation validation.  There are many ways to write software to solve a given problem, and using an implementation evaluation approach would force both instructors and students to treat just one approach as the "right" way.  Instead, ProjectPulse uses both a structural and behavioral validation approach, ensuring the software is both well-written and functional without dictating exactly how it is written.
+			</p>
+		  <div class="project-meta">
+			<span class="badge rounded-pill project-tag">Java</span>
+			<span class="badge rounded-pill project-tag">Reflection</span>
+			<span class="badge rounded-pill project-tag">Testing</span>
+			<span class="badge rounded-pill project-tag">EdTech</span>
+		  </div>
+		</div>
+		<br>
+		<!-- Problem -->
+		<div id="problem" class="project-section">
+		  <h2 class="bi bi-exclamation-circle text-primary">&nbsp; Problem</h2>
+		  <p>
+			Programming students need rapid feedback while they are learning, but traditional grading workflows often delay that feedback until after an assignment is submitted. Existing browser-based assessment platforms provide automation but require students to work in an environment that is quite a bit different from the professional IDE-based workflow used in industry. 
+		  </p>
+		  <p>
+			Instructors also need an assessment solution that scales to large classes while evaluating behavior and correctness rather than relying solely on static code analysis.
+		  </p>
+		</div>
+		<br>
+		<!-- Solution -->
+		<div id="solution" class="project-section">
+		  <h2 class="bi bi-lightbulb text-primary">&nbsp; Solution</h2>
+		  <p>
+		    ProjectPulse was designed around a single guiding principle: assessments should adapt to the student's development workflow, not require students to adapt to the assessment system.
+		  </p>
+		  <p>
+			ProjectPulse approaches automated assessment as a configurable software analysis and testing framework rather than simply a collection of unit tests. Assessment rules are defined through JSON, allowing instructors to evaluate documentation, code style, class structure, fields, methods, runtime behavior, console input/output, and design expectations without modifying application code.
+		  </p>
+		  <p>
+			Unlike traditional test suites that often fail immediately and stop executing when expected classes or methods have not yet been implemented, ProjectPulse was designed to evaluate partially completed solutions. Students receive meaningful feedback throughout the development process, allowing them to validate incremental progress while working in their normal IDE-based workflow. This design supports iterative development practices that more closely resemble professional software engineering.
+		  </p>
+		</div>
+		<br>
+		<!-- Architecture -->
+		<div id="system-architecture" class="project-section">
+		  <h2 class="bi bi-diagram-3 text-primary">&nbsp; System Architecture</h2>
+		  <p>
+		    Every major architectural decision in ProjectPulse traces back to one or more of four guiding design principles:
+		  </p>
+		  <ul>
+		    <li>Extensibility and Flexibility</li>
+		    <li>Authenticity of the developer experience</li>
+		    <li>Incremental development feedback</li>
+		    <li>Data integrity</li>
+		  </ul>
+		  <p>
+		  <p>
+		    The architecture reflects a clear separation between assessment definition, assessment execution, reporting, and distribution, allowing each subsystem to evolve independently.
+		  </p>
+		  <div class="mermaid">
+			flowchart LR
+
+				DEVELOPER["Developer"]
+
+				subgraph Author["Assessment Authoring"]
+					DSL["JSON Assessment Definition"]
+					SCHEMA["ProjectPulse JSON Schema"]
+					SIGN["JWS Signature"]
+				end
+
+				subgraph Engine["ProjectPulse Assessment Engine"]
+					LOAD["Load Assessment"]
+					VALIDATE["Schema & Signature Validation"]
+
+					subgraph ANALYZERS["Analysis Pipeline"]
+						STRUCT["Structure Analyzer"]
+						STYLE["Style Analyzer<br>(CheckStyle)"]
+						BEHAVIOR["Behavior Analyzer"]
+					end
+
+					REPORT["Layered Reporting"]
+					RESULTS["Assessment Results"]
+				end
+
+				subgraph Application["Application Under Test"]
+					CODE["Compiled Java Application"]
+				end
+
+				DEVELOPER -->|"Runs ProjectPulse"| LOAD
+
+				DSL --> LOAD
+				SCHEMA --> VALIDATE
+				SIGN --> VALIDATE
+
+				LOAD --> VALIDATE
+
+				VALIDATE --> STRUCT
+				VALIDATE --> STYLE
+				VALIDATE --> BEHAVIOR
+
+				CODE --> STRUCT
+				CODE --> STYLE
+				CODE --> BEHAVIOR
+
+				STRUCT --> REPORT
+				STYLE --> REPORT
+				BEHAVIOR --> REPORT
+
+				REPORT --> RESULTS
+				RESULTS -->|"Immediate feedback"| DEVELOPER
+
+				DEVELOPER -.->|"Updates code"| CODE
+
+				classDef analyzer fill:#dbeafe,stroke:#2563eb,stroke-width:2px;
+				class STRUCT,STYLE,BEHAVIOR analyzer;
+
+				classDef result fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+				class RESULTS result;
+		  </div>
+		</div>
+		<br>
+		<!-- Tradeoffs -->
+		<div id="design-tradeoffs" class="project-section">
+		  <h2 class="bi bi-arrow-left-right text-primary">&nbsp; Design Tradeoffs</h2>
+		  <br>
+		  <div class="decision-list">
+  		    <p>
+			  Every architectural decision represents a tradeoff between competing priorities.
+		    </p>
+			<div class="decision-item">
+			  <h4>DSL vs. Java</h4>
+			  <p>
+			    Writing assessments in Java would have provided maximum flexibility, but it would also have tightly coupled assessment definitions to the assessment engine while making them more difficult to validate, secure, and distribute. ProjectPulse instead uses a constrained domain-specific language that intentionally sacrifices expressiveness in exchange for predictability, schema validation, security, tooling, and long-term maintainability.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h4>Reflection</h4>
+			  <p>
+			    Reflection introduces additional complexity around missing classes, inaccessible members, overloaded methods, type resolution, and inheritance. ProjectPulse accepts this complexity because it enables assessment of arbitrary student projects without requiring any modifications to application code. Defensive discovery and structured feedback allow the platform to report missing or incorrect components while continuing the remaining analysis.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h4>Local Execution vs. Server-Side Assessment</h4>
+			  <p>
+			    Executing assessments locally provides immediate feedback and offline support, but requires the assessment engine to establish trust through digital signatures rather than relying on a centrally controlled execution environment.
+			  </p>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<!-- Lessons learned -->
+		<div id="lessons-learned" class="project-section">
+		  <h2 class="bi bi-book text-primary">&nbsp; Lessons Learned</h2>
+		  <div class="decision-list">
+			<div class="decision-item">
+			  <h3>Building on proven foundations</h3>
+			  <p>
+				The most maintainable systems aren't those with the fewest dependencies — they're those that clearly distinguish between commodity functionality such as CheckStyle and the features that provide unique value. ProjectPulse intentionally builds on proven open-source tools where appropriate, allowing development effort to focus on the capabilities that make the platform distinctive.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h3>Separate the policy from mechanism</h3>
+			  <p>
+			    One of the most important architectural lessons from ProjectPulse was recognizing that assessment policy and assessment execution evolve independently. Assessment definitions describe what should be evaluated, while the assessment engine determines how that evaluation is performed. Distribution determines where assessments originate, and digital signatures determine whether they can be trusted. Separating these concerns allowed each to evolve independently without increasing the complexity of the overall system.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h3>Design for growth</h3>
+			  <p>
+			    Small utilities have a tendency to become platforms. Designing for extensibility early—through modular analyzers, data-driven assessment definitions, and stable abstractions—allowed ProjectPulse to grow without requiring major architectural rewrites.
+			  </p>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<!-- Conclusion -->
+		<div id="conclusion" class="project-section">
+		  <h2 class="bi bi-check2-circle text-primary">&nbsp; Conclusion</h2>
+		  <p>
+		    ProjectPulse ultimately became more than an automated grading tool. It evolved into a configurable software analysis framework whose architecture was shaped by a single guiding principle: assessment should integrate into the developer's workflow rather than requiring developers to adapt to the assessment system. The diagram below illustrates how that philosophy influenced the major architectural decisions throughout the platform.
+		  </p>
+		  <p>
+		    The modular architecture of ProjectPulse intentionally separates assessment definition, execution, reporting, and distribution. As a result, future capabilities—such as centralized reporting, instructor analytics, REST-based assessment collection, and Learning Tools Interoperability (LTI) integration—can be introduced by extending existing components rather than redesigning the platform.
+		  </p>
+		  <p>
+		    ProjectPulse continues to evolve as additional analyzers, reporting capabilities, and assessment definitions are added, but its guiding architectural principles have remained unchanged throughout the project's growth.
+		  </p>
+ 		  <h5 style="text-align: center;">Architectural Design Principles</h5>
+		  <div class="mermaid">
+		    flowchart TD
+		  	  GP["Guiding Principle: <br>Assessment Adapts<br>to the<br>Developer Workflow"]
+
+			  GP --> IA["Incremental Assessment"]
+			  GP --> IDE["IDE Integration"]
+			  GP --> LE["Local Execution"]
+
+			  IA --> RA["Reflection-Based Analysis"]
+			  IA --> BFV["Behavior-First Validation"]
+
+			  RA --> MA["Modular Analyzers"]
+			  BFV --> MA
+
+			  MA --> DSL["Domain-Specific Language"]
+				
+			  LE --> JWS["Digitally Signed<br>Assessment Definitions"]
+
+			  IDE --> DF["Authentic Developer<br>Workflow"]
+			  LE --> DF
+			  IA --> DF
+		  </div>
+	    </div>
+		<br>
+		<!-- Tech stack -->
+		<div id="tech-stack" class="project-section">
+		  <h2 class="bi bi-cpu text-primary">&nbsp; Technology Stack</h2>
+		  <div class="project-meta">
+			<span class="badge rounded-pill project-tag">Java</span>
+			<span class="badge rounded-pill project-tag">JSON</span>
+			<span class="badge rounded-pill project-tag">JWS</span>
+			<span class="badge rounded-pill project-tag">CheckStyle</span>
+			<span class="badge rounded-pill project-tag">Reflection</span>
+			<span class="badge rounded-pill project-tag">JUnit</span>
+			<span class="badge rounded-pill project-tag">Jackson</span>
+			<span class="badge rounded-pill project-tag">Maven</span>
+			<span class="badge rounded-pill project-tag">MermaidJS</span>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Charles Almond</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charles-almond-49620810" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+	mermaid.initialize({ 
+	  startOnLoad: true,
+	  theme: "default",
+      securityLevel: "strict",
+      flowchart: {
+        curve: "basis",
+        htmlLabels: true
+      }
+	});
+  </script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
