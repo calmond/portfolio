@@ -2,6 +2,7 @@
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   min-height: calc(100vh - 92px);
@@ -63,6 +64,52 @@
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 1.5;
+  }
+  
+  .typed-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  
+    /*
+     * Reserve enough room for all four lines so the hero content
+     * does not jump as each phrase is added.
+     */
+    min-height: 8rem;
+    margin-top: 1rem;
+  }
+  
+  .typed-stack-line {
+    color: var(--heading-color);
+    font-size: clamp(1.15rem, 2vw, 1.6rem);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  
+  .typed-stack-line.is-typing::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 0.12em;
+    color: var(--accent-color);
+    animation: typed-cursor-blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typed-cursor-blink {
+    0%,
+    45% {
+      opacity: 1;
+    }
+  
+    46%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .typed-stack-line.is-typing::after {
+      animation: none;
+    }
   }
 
   img {

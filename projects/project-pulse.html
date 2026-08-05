@@ -65,26 +65,10 @@
 		preserving an authentic IDE-based development workflow.
 		</p>
 	  </div>
-	  
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-	    <p>
-		  Jump to
-		  <ul>
-		    <li><a href="#overview">Overview</a></li>
-			<li><a href="#problem">Problem</a></li>
-			<li><a href="#solution">Solution</a></li>
-			<li><a href="#system-architecture">System Architecture</a></li>
-			<li><a href="#design-tradeoffs">Design Tradeoffs</a></li>
-			<li><a href="#lessons-learned">Lessons Learned</a></li>
-			<li><a href="#conclusion">Conclusion</a></li>
-			<li><a href="#tech-stack">Technology Stack</a></li>
-		  </ul>
-		</p>
-	  </div>
-	  <div class="container" data-aos="fade-up" data-aos-delay="200">
-		<div id="overview" class="project-overview">
+	  <div class="container project-overview" data-aos="fade-up" data-aos-delay="100">
+		<div id="overview">
 		  <div>
-			<h2 id="overview" class="bi bi-card-list text-primary">&nbsp; Overview</h2>
+			<h2 class="bi bi-card-list text-primary">&nbsp; Overview</h2>
 			<p>
 			  Most automated programming assessment platforms require students to work within a browser-based environment, while traditional unit tests assume an application is already complete before meaningful feedback can be produced. Both approaches differ significantly from the incremental, IDE-based workflow used in professional software development. 
 			</p>
@@ -94,16 +78,10 @@
 			<p>
 			  ProjectPulse does not perform implementation validation.  There are many ways to write software to solve a given problem, and using an implementation evaluation approach would force both instructors and students to treat just one approach as the "right" way.  Instead, ProjectPulse uses both a structural and behavioral validation approach, ensuring the software is both well-written and functional without dictating exactly how it is written.
 			</p>
-		  <div class="project-meta">
-			<span class="badge rounded-pill project-tag">Java</span>
-			<span class="badge rounded-pill project-tag">Reflection</span>
-			<span class="badge rounded-pill project-tag">Testing</span>
-			<span class="badge rounded-pill project-tag">EdTech</span>
-		  </div>
 		</div>
 		<br>
 		<!-- Problem -->
-		<div id="problem" class="project-section">
+		<div id="problem">
 		  <h2 class="bi bi-exclamation-circle text-primary">&nbsp; Problem</h2>
 		  <p>
 			Programming students need rapid feedback while they are learning, but traditional grading workflows often delay that feedback until after an assignment is submitted. Existing browser-based assessment platforms provide automation but require students to work in an environment that is quite a bit different from the professional IDE-based workflow used in industry. 
@@ -114,7 +92,7 @@
 		</div>
 		<br>
 		<!-- Solution -->
-		<div id="solution" class="project-section">
+		<div id="solution">
 		  <h2 class="bi bi-lightbulb text-primary">&nbsp; Solution</h2>
 		  <p>
 		    ProjectPulse was designed around a single guiding principle: assessments should adapt to the student's development workflow, not require students to adapt to the assessment system.
@@ -128,7 +106,7 @@
 		</div>
 		<br>
 		<!-- Architecture -->
-		<div id="system-architecture" class="project-section">
+		<div id="system-architecture">
 		  <h2 class="bi bi-diagram-3 text-primary">&nbsp; System Architecture</h2>
 		  <p>
 		    Every major architectural decision in ProjectPulse traces back to one or more of four guiding design principles:
@@ -206,7 +184,7 @@
 		</div>
 		<br>
 		<!-- Tradeoffs -->
-		<div id="design-tradeoffs" class="project-section">
+		<div id="design-tradeoffs">
 		  <h2 class="bi bi-arrow-left-right text-primary">&nbsp; Design Tradeoffs</h2>
 		  <br>
 		  <div class="decision-list">
@@ -235,7 +213,7 @@
 		</div>
 		<br>
 		<!-- Lessons learned -->
-		<div id="lessons-learned" class="project-section">
+		<div id="lessons-learned">
 		  <h2 class="bi bi-book text-primary">&nbsp; Lessons Learned</h2>
 		  <div class="decision-list">
 			<div class="decision-item">
@@ -260,7 +238,7 @@
 		</div>
 		<br>
 		<!-- Conclusion -->
-		<div id="conclusion" class="project-section">
+		<div id="conclusion">
 		  <h2 class="bi bi-check2-circle text-primary">&nbsp; Conclusion</h2>
 		  <p>
 		    ProjectPulse ultimately became more than an automated grading tool. It evolved into a configurable software analysis framework whose architecture was shaped by a single guiding principle: assessment should integrate into the developer's workflow rather than requiring developers to adapt to the assessment system. The diagram below illustrates how that philosophy influenced the major architectural decisions throughout the platform.
@@ -296,8 +274,9 @@
 		  </div>
 	    </div>
 		<br>
+		<br>
 		<!-- Tech stack -->
-		<div id="tech-stack" class="project-section">
+		<div id="tech-stack">
 		  <h2 class="bi bi-cpu text-primary">&nbsp; Technology Stack</h2>
 		  <div class="project-meta">
 			<span class="badge rounded-pill project-tag">Java</span>

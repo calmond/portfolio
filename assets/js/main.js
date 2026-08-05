@@ -102,6 +102,62 @@
   }
   window.addEventListener('load', aosInit);
 
+/**
+ * Initialize the stacked typed-text animation.
+ */
+const typedStack = document.querySelector('.typed-stack');
+
+if (typedStack) {
+  const typedItems = typedStack.dataset.typedItems
+    .split(',')
+    .map(item => item.trim())
+    .filter(Boolean);
+
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  const addStaticItems = () => {
+    typedItems.forEach(item => {
+      const line = document.createElement('div');
+      line.classList.add('typed-stack-line');
+      line.textContent = item;
+      typedStack.append(line);
+    });
+  };
+
+  if (prefersReducedMotion) {
+    addStaticItems();
+  } else {
+    let currentIndex = 0;
+
+    const typeNextItem = () => {
+      if (currentIndex >= typedItems.length) {
+        return;
+      }
+
+      const line = document.createElement('div');
+      line.classList.add('typed-stack-line', 'is-typing');
+      typedStack.append(line);
+
+      new Typed(line, {
+        strings: [typedItems[currentIndex]],
+        typeSpeed: 40,
+        showCursor: false,
+        loop: false,
+
+        onComplete: () => {
+          line.classList.remove('is-typing');
+          currentIndex++;
+          window.setTimeout(typeNextItem, 250);
+        }
+      });
+    };
+
+    typeNextItem();
+  }
+}
+
   /**
    * Init typed.js
    */
@@ -117,7 +173,7 @@
       backDelay: 2000
     });
   }
-
+  
   /**
    * Animate the skills items on reveal
    */

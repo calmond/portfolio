@@ -1,7 +1,3 @@
-// main: ../main.scss
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 .contact {
   .info-wrap {
     background-color: var(--surface-color);
@@ -45,7 +41,53 @@
     }
   }
 
-  .php-email-form {
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profile-heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    margin-left: 59px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      width: fit-content;
+      color: var(--default-color);
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+
+      .bi {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+        line-height: 1;
+        color: var(--accent-color);
+        background: transparent;
+        border-radius: 0;
+      }
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+  
+  .contact-form {
     background-color: var(--surface-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
