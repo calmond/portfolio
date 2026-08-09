@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Weird AI | Charles Almond</title>
+  <meta name="description"
+      content="Weird AI is an open-source learning platform for understanding large language models, reasoning systems, reinforcement learning, and AI engineering from first principles.">
+  <meta name="keywords" content="">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="projects-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <div class="sitename">
+			<h1>Charles Almond</h1>
+			<h5>Designing systems that improve the way software is built.</h5>
+		</div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home<br></a></li>
+		  <li><a href="index.html">Projects Overview<br></a></li>
+		  <li><a href="weird-ai.html" class="active">Weird AI<br></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+	  <section id="project-detail" class="project-detail section">
+	  
+	  <div class="container section-title" data-aos="fade-up">
+		<h1 id="top" class="text-primary">Weird AI</h1>
+		<p>
+		A software-engineering-focused learning platform that guides students from implementing the foundations of large language models 
+		<br>
+		through modern reasoning techniques, distillation, and reinforcement learning.
+		</p>
+		<div class="mt-3">
+		  <a href="https://github.com/calmond/WeirdAI"
+			 class="btn btn-outline-primary"
+			 target="_blank"
+			 rel="noopener noreferrer">
+			<i class="bi bi-github me-2"></i>
+			View on GitHub
+		  </a>
+		</div>
+		<div class="mt-3">
+		  <span class="badge rounded-pill project-tag">Open Source</span>
+		  <span class="badge rounded-pill project-tag">Active Development</span>
+		</div>
+	  </div>
+	  <div class="container project-overview" data-aos="fade-up" data-aos-delay="100">
+		<div id="overview">
+		  <div>
+			<h2 class="bi bi-card-list text-primary">&nbsp; Overview</h2>
+			<p>
+			  Weird AI is an open-source instructional platform designed to help computer science students understand modern artificial intelligence by building its core components rather than treating large language models as black-box services.
+			</p>
+			<p>
+			  The project combines Jupyter notebooks, reusable Python modules, automated tests, structured programming assignments, and larger integrated projects into a progressive learning experience. Students begin with text processing and tokenization, then implement fundamental components such as attention, normalization, loss functions, training, and generation before progressing into reasoning models and reinforcement-learning techniques.
+			</p>
+			<p>
+			  Although the subject is artificial intelligence, I intentionally approached this from a software engineering perspective. AI components are implemented as modular, testable software, which allows students to explore the underlying mathematics and algorithms while continuing to practice source control, automated testing, modular design, dependency management, and iterative development.
+			</p>
+		</div>
+		<br>
+		<!-- Problem -->
+		<div id="problem">
+		  <h2 class="bi bi-exclamation-circle text-primary">&nbsp; Problem</h2>
+		  <p>
+			 Rapid adoption of generative AI has made powerful models readily accessible through APIs and conversational interfaces, but ease of use can obscure how these systems actually work. Students can build applications around large language models without understanding tokenization, attention, training, inference, or the techniques that enable modern reasoning models.
+		  </p>
+		  <p>
+			At the opposite extreme, AI instruction can become heavily theoretical, leaving students able to describe algorithms without developing the engineering skills required to implement, test, debug, and integrate them into working software.
+		  </p>
+		  <p>
+			Weird AI addresses the gap between these approaches: students need enough theory to understand why modern AI systems work, but they also need to experience those concepts as software engineers by implementing and validating them themselves.
+		  </p>
+		</div>
+		<br>
+		<!-- Solution -->
+		<div id="solution">
+		  <h2 class="bi bi-lightbulb text-primary">&nbsp; Solution</h2>
+		  <p>
+		    Weird AI uses a build-from-first-principles approach in which students progressively construct the components of modern language and reasoning models. Concepts are introduced through exploratory notebooks and then reinforced through reusable Python implementations, automated tests, and increasingly integrated assignments.
+		  </p>
+		  <p>
+			The curriculum deliberately separates conceptual exploration from production-style implementation. Notebooks provide an environment for visualization, experimentation, and explanation, while application modules require students to translate those concepts into maintainable and testable software.
+		  </p>
+		  <p>
+			This progression eventually connects foundational transformer concepts with pretrained model use, reasoning techniques, reinforcement learning, distillation, and GRPO. Rather than presenting these as unrelated AI techniques, Weird AI shows how each layer builds on the architectural foundations established earlier in the course.
+		  </p>
+		</div>
+		<br>
+		<!-- Architecture -->
+		<div id="system-architecture">
+		  <h2 class="bi bi-diagram-3 text-primary">&nbsp; System Architecture</h2>
+		  <p>
+		    Every major architectural decision in Weird AI traces back to one or more of four guiding design principles:
+		  </p>
+		  <ul>
+		    <li>Build before abstracting</li>
+		    <li>Theory reinforced through implementation</li>
+		    <li>Software engineering practices remain first-class</li>
+		    <li>Complexity introduced incrementally</li>
+		  </ul>
+		  <p>
+		    The architecture reflects a clear separation between theory, practice, and implementation, while also applying software engineering best practices by building and testing incrementally as new concepts are introduced.
+		  </p>
+		  <div class="mermaid">
+			flowchart LR
+
+				subgraph LEARN["Concept Exploration"]
+					TEXT["Text & Data"]
+					NOTEBOOK["Jupyter Notebooks"]
+					VIS["Visualization & Experiments"]
+				end
+
+				subgraph BUILD["Implementation"]
+					STARTER["Starter Code"]
+					MODULES["Reusable Python Modules"]
+					TESTS["Automated Tests"]
+				end
+
+				subgraph MODEL["Model Development"]
+					TOKEN["Tokenization"]
+					ATT["Attention"]
+					TRANS["Transformer Components"]
+					TRAIN["Training"]
+					GEN["Generation"]
+				end
+
+				subgraph REASON["Reasoning"]
+					REASONING["Reasoning Models"]
+					DISTILL["Distillation"]
+					RL["Reinforcement Learning"]
+					GRPO["GRPO"]
+				end
+
+				TEXT --> NOTEBOOK
+				NOTEBOOK --> VIS
+				VIS --> STARTER
+
+				STARTER --> MODULES
+				MODULES --> TESTS
+				TESTS -->|"Feedback"| MODULES
+
+				MODULES --> TOKEN
+				TOKEN --> ATT
+				ATT --> TRANS
+				TRANS --> TRAIN
+				TRAIN --> GEN
+
+				GEN --> REASONING
+				REASONING --> RL
+				RL --> DISTILL
+				DISTILL --> GRPO
+		  </div>
+		</div>
+		<br>
+		
+		<!-- Learning Progression -->
+		<div id="learning-progression">
+		  <h2 class="bi bi-book text-primary">&nbsp; Learning Progression</h2>
+		  <p>
+		    Weird AI is structured as a cumulative learning experience rather than a collection of independent AI topics. Each stage builds on concepts and software developed earlier in the course, moving students from the foundations of language models through increasingly sophisticated reasoning techniques.
+		  </p>
+		  <p>
+		    The diagram below shows the conceptual sequence of the curriculum rather than the software structure of the project.
+		  </p>
+		  <div class="mermaid">
+			flowchart LR
+
+				subgraph Foundations["LLM Foundations"]
+					direction TB
+					TEXT["Text Exploration"]
+					TOKEN["Tokenization"]
+					ATT["Attention Mechanisms"]
+					TRANS["Transformer Components"]
+					TRAIN["Pretraining"]
+					GEN["Text Generation"]
+
+					TEXT --> TOKEN
+					TOKEN --> ATT
+					ATT --> TRANS
+					TRANS --> TRAIN
+					TRAIN --> GEN
+				end
+
+				subgraph Applied["Working with Language Models"]
+					direction TB
+					PRE["Pretrained Models"]
+					REASON["Reasoning & Generation"]
+					REFINE["Generation Refinement"]
+
+					PRE --> REASON
+					REASON --> REFINE
+				end
+
+				subgraph Advanced["Reasoning Models"]
+					direction TB
+					RL["Reinforcement Learning"]
+					DISTILL["Model Distillation"]
+					GRPO["GRPO"]
+					IMPROVE["Improving GRPO"]
+					
+					RL --> DISTILL
+					DISTILL --> GRPO
+					GRPO --> IMPROVE
+				end
+
+				GEN --> PRE
+				REFINE --> RL
+
+				classDef foundation fill:#dbeafe,stroke:#2563eb,stroke-width:2px;
+				classDef applied fill:#fef3c7,stroke:#d97706,stroke-width:2px;
+				classDef advanced fill:#dcfce7,stroke:#16a34a,stroke-width:2px;
+
+				class TEXT,TOKEN,ATT,TRANS,TRAIN,GEN foundation;
+				class PRE,REASON,REFINE applied;
+				class RL,GRPO,IMPROVE,DISTILL advanced;
+		  </div>
+		  <div class="decision-list">
+  		    <div class="decision-item">
+			  <h4>Understand, Implement, Apply</h4>
+			  <p>
+			    This progression intentionally moves between <b>understanding, implementation, and application</b>. Students first explore how a technique works, implement its important components, and then use those concepts as foundations for more sophisticated systems.
+			  </p>
+			</div>
+		</div>
+		<br>
+		
+		<!-- Tradeoffs -->
+		<div id="design-tradeoffs">
+		  <h2 class="bi bi-arrow-left-right text-primary">&nbsp; Design Tradeoffs</h2>
+		  <br>
+		  <div class="decision-list">
+  		    <p>
+			  Every architectural decision represents a tradeoff between competing priorities.
+		    </p>
+			<div class="decision-item">
+			  <h4>From Scratch vs. Framework Abstractions</h4>
+			  <p>
+			    High-level libraries can make sophisticated AI capabilities available with very little code, but they can also conceal the mechanisms students are trying to understand. Weird AI intentionally implements important components at a lower level before introducing higher-level abstractions. This requires more instructional time but gives students a stronger mental model for understanding the frameworks and pretrained models they encounter later.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h4>Notebooks vs. Application Code</h4>
+			  <p>
+			    Jupyter notebooks are exceptionally useful for explanation, visualization, and experimentation, but large notebook-based projects can encourage tightly coupled and difficult-to-test implementations. Weird AI uses notebooks as the instructional interface while moving substantial implementations into reusable Python modules that can be independently tested.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h4>Educational Scale vs. Frontier Scale</h4>
+			  <p>
+			    Modern frontier models operate at a computational scale that is impractical for an undergraduate laboratory environment. Weird AI therefore prioritizes architectural fidelity over scale: students work with smaller models and datasets that preserve the important concepts while remaining feasible on accessible hardware.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h4>Guided Implementation vs. Open-Ended Development</h4>
+			  <p>
+			    Implementing AI algorithms from scratch can create substantial cognitive load when students are simultaneously learning the underlying concepts. Structured starter code, notebooks, and automated tests provide scaffolding while still requiring students to implement the important behavior themselves. That scaffolding is progressively reduced as students gain experience.
+			  </p>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<!-- Lessons learned -->
+		<div id="lessons-learned">
+		  <h2 class="bi bi-book text-primary">&nbsp; Lessons Learned</h2>
+		  <div class="decision-list">
+			<div class="decision-item">
+			  <h3>Abstraction is more meaningful after implementation</h3>
+			  <p>
+			    Students understand high-level AI libraries differently after implementing the mechanisms those libraries encapsulate. Building tokenizers, attention mechanisms, training components, and generation logic provides a concrete foundation for understanding what pretrained-model frameworks are doing on their behalf.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h3>AI software still benefits from conventional engineering discipline</h3>
+			  <p>
+			    Experimental AI code can quickly become difficult to reason about when model behavior, data processing, training logic, and evaluation are tightly coupled. Modular implementations and automated tests proved valuable not only as assessment mechanisms, but as tools for isolating problems in inherently probabilistic systems.
+			  </p>
+			</div>
+			<div class="decision-item">
+			  <h3>Curriculum architecture matters as much as individual lessons</h3>
+			  <p>
+			    The most difficult design problem was not explaining any single AI technique, but constructing a progression in which each new concept could build naturally on knowledge and software developed earlier. Treating the curriculum as an integrated system rather than a collection of independent topics allowed increasingly sophisticated techniques to reuse established mental models and implementation patterns.
+			  </p>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<!-- Conclusion -->
+		<div id="conclusion">
+		  <h2 class="bi bi-check2-circle text-primary">&nbsp; Conclusion</h2>
+		  <p>
+		    Weird AI began with a straightforward educational goal: give students enough understanding of modern artificial intelligence to see beyond the API boundary. It evolved into a broader experiment in teaching AI as a software engineering discipline.
+		  </p>
+		  <p>
+		    By combining conceptual notebooks, from-scratch implementations, reusable modules, automated testing, and progressively more sophisticated model architectures, the project allows students to move from understanding individual mechanisms to reasoning about complete AI systems.
+		  </p>
+		  <p>
+		    The project also reflects a broader principle that informs my work with AI: effective adoption requires understanding both the capabilities of a technology and the abstractions beneath it. Frameworks, pretrained models, hosted APIs, and increasingly capable AI development tools provide tremendous leverage, but engineers are better positioned to make architectural decisions when they understand the systems those abstractions conceal.
+		  </p>
+		  <p>
+		    Weird AI continues to evolve alongside the rapidly changing AI landscape, but its central principle remains stable: <b>The best way to understand a complex system is to build enough of it to understand the decisions its abstractions hide.</b>
+		  </p>
+	    </div>
+		<br>
+		<br>
+		<!-- Tech stack -->
+		<div id="tech-stack">
+		  <h2 class="bi bi-cpu text-primary">&nbsp; Technology Stack</h2>
+		  <div class="project-meta">
+		    <span class="badge rounded-pill project-tag">Python</span>
+			<span class="badge rounded-pill project-tag">PyTorch</span>
+			<span class="badge rounded-pill project-tag">Transformers</span>
+			<span class="badge rounded-pill project-tag">Jupyter</span>
+			<span class="badge rounded-pill project-tag">NumPy</span>
+			<span class="badge rounded-pill project-tag">Pandas</span>
+			<span class="badge rounded-pill project-tag">pytest</span>
+			<span class="badge rounded-pill project-tag">GitHub Actions</span>
+			<span class="badge rounded-pill project-tag">Hugging Face</span>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Charles Almond</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charles-almond-49620810" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+	mermaid.initialize({ 
+	  startOnLoad: true,
+	  theme: "default",
+      securityLevel: "strict",
+      flowchart: {
+        curve: "basis",
+        htmlLabels: true
+      }
+	});
+  </script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
