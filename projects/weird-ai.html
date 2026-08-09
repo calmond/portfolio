@@ -136,53 +136,52 @@
 		    The architecture reflects a clear separation between theory, practice, and implementation, while also applying software engineering best practices by building and testing incrementally as new concepts are introduced.
 		  </p>
 		  <div class="mermaid">
-			flowchart LR
+			flowchart TD
 
 				subgraph LEARN["Concept Exploration"]
+					direction LR
 					TEXT["Text & Data"]
 					NOTEBOOK["Jupyter Notebooks"]
 					VIS["Visualization & Experiments"]
+
+					TEXT --> NOTEBOOK --> VIS
 				end
 
-				subgraph BUILD["Implementation"]
+				subgraph BUILD["Implementation & Validation"]
+					direction LR
 					STARTER["Starter Code"]
 					MODULES["Reusable Python Modules"]
 					TESTS["Automated Tests"]
+
+					STARTER --> MODULES
+					MODULES --> TESTS
+					TESTS -.->|"Feedback"| MODULES
 				end
 
-				subgraph MODEL["Model Development"]
+				subgraph MODEL["Language Model Foundations"]
+					direction LR
 					TOKEN["Tokenization"]
 					ATT["Attention"]
 					TRANS["Transformer Components"]
 					TRAIN["Training"]
 					GEN["Generation"]
+
+					TOKEN --> ATT --> TRANS --> TRAIN --> GEN
 				end
 
-				subgraph REASON["Reasoning"]
-					REASONING["Reasoning Models"]
-					DISTILL["Distillation"]
+				subgraph REASON["Reasoning Models"]
+					direction LR
+					REASONING["Reasoning"]
 					RL["Reinforcement Learning"]
+					DISTILL["Distillation"]
 					GRPO["GRPO"]
+
+					REASONING --> RL --> DISTILL --> GRPO
 				end
 
-				TEXT --> NOTEBOOK
-				NOTEBOOK --> VIS
-				VIS --> STARTER
-
-				STARTER --> MODULES
-				MODULES --> TESTS
-				TESTS -->|"Feedback"| MODULES
-
-				MODULES --> TOKEN
-				TOKEN --> ATT
-				ATT --> TRANS
-				TRANS --> TRAIN
-				TRAIN --> GEN
-
-				GEN --> REASONING
-				REASONING --> RL
-				RL --> DISTILL
-				DISTILL --> GRPO
+				LEARN --> BUILD
+				BUILD --> MODEL
+				MODEL --> REASON
 		  </div>
 		</div>
 		<br>
