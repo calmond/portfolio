@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AI Engineering Lab | Charles Almond</title>
+  <meta name="description" content="A self-hosted engineering platform for experimenting with AI-assisted software development, local inference, agentic workflows, and modern software engineering practices.">
+  <meta name="keywords" content="">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="projects-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <div class="sitename">
+          <h1>Charles Almond</h1>
+          <h5>Designing systems that improve the way software is built.</h5>
+        </div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home<br></a></li>
+          <li><a href="index.html">Projects Overview<br></a></li>
+          <li><a href="ai-engineering-lab.html" class="active">AI Engineering Lab<br></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="project-detail" class="project-detail section">
+      <div class="container section-title" data-aos="fade-up">
+        <h1 id="top" class="text-primary">AI Engineering Lab</h1>
+        <p>
+          A self-hosted engineering platform for experimenting with AI-assisted software development,
+          <br>
+          local inference, agentic workflows, and the integration of AI into modern software engineering practices.
+        </p>
+        <div class="mt-3">
+          <span class="badge rounded-pill project-tag">Self-Hosted</span>
+          <span class="badge rounded-pill project-tag">Active Development</span>
+        </div>
+      </div>
+
+      <div class="container project-overview" data-aos="fade-up" data-aos-delay="100">
+        <div id="overview">
+          <div>
+            <h2 class="bi bi-card-list text-primary">&nbsp; Overview</h2>
+            <p>The AI Engineering Lab is a self-hosted development environment designed to explore how artificial intelligence can be integrated into professional software engineering workflows. Rather than treating AI as a standalone service or development tool, the environment provides the infrastructure needed to experiment with AI-assisted development as part of a complete software engineering platform.</p>
+            <p>The lab combines virtualization, GPU-accelerated local inference, source control, continuous integration, containerized services, and isolated development environments. Individual services are separated into virtual machines so that components can evolve independently while still participating in a common development workflow.</p>
+            <p>The initial environment is intentionally modest enough to support experimentation on a single workstation while being designed around concepts that can extend to a distributed environment. This allows architectural ideas to be validated before committing additional hardware and operational complexity.</p>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="problem">
+          <h2 class="bi bi-exclamation-circle text-primary">&nbsp; Problem</h2>
+          <p>AI-assisted software development is increasingly centered around highly capable frontier models delivered as hosted services. These models provide tremendous capability, but relying exclusively on them introduces tradeoffs involving cost, latency, privacy, availability, and control over how development workloads are processed.</p>
+          <p>At the same time, increasingly capable smaller models can execute many software engineering tasks locally. The challenge is not simply determining whether a local model can generate code, but understanding which development tasks can be performed effectively by local models, which require frontier-model capabilities, and how both can participate in a reliable engineering workflow.</p>
+          <p>Exploring those questions requires more than a GPU and a model server. It requires an environment where AI inference can be integrated with source control, automated testing, continuous integration, development tooling, and eventually observability and workload routing.</p>
+        </div>
+
+        <br>
+
+        <div id="solution">
+          <h2 class="bi bi-lightbulb text-primary">&nbsp; Solution</h2>
+          <p>The AI Engineering Lab provides a controlled platform for experimenting with these architectural questions. The environment separates development infrastructure, AI inference, CI/CD services, and developer workloads into independently managed components running on a Proxmox virtualization host.</p>
+          <p>A dedicated Forge environment provides Git-based source control through Gitea and automated build and testing workflows through Woodpecker CI. A separate AI Gateway provides GPU-backed local model inference through Ollama, with model data stored independently from the operating system. Additional virtual machines provide isolated environments for development roles and experiments without coupling those workloads directly to the underlying infrastructure.</p>
+          <p>This separation allows individual components to be replaced, upgraded, or scaled without redesigning the entire environment. More importantly, it creates a platform where AI-assisted development can be evaluated as part of a complete software delivery process rather than as an isolated coding demonstration.</p>
+        </div>
+
+        <br>
+
+        <div id="system-architecture">
+          <h2 class="bi bi-diagram-3 text-primary">&nbsp; System Architecture</h2>
+          <p>Every major architectural decision in the AI Engineering Lab traces back to four guiding design principles:</p>
+          <ul>
+            <li><b>Separation of concerns</b> — development infrastructure, inference, CI/CD, and experimental workloads should evolve independently.</li>
+            <li><b>Local control</b> — models, development artifacts, and engineering workflows should be capable of operating on infrastructure under direct control.</li>
+            <li><b>Replaceable components</b> — individual tools and models should be replaceable without redesigning the platform.</li>
+            <li><b>Design for expansion</b> — the initial single-host implementation should provide a foundation for distributed inference and additional compute resources.</li>
+          </ul>
+          <p>The architecture deliberately separates the software delivery platform from AI inference. Local models are therefore a service consumed by development environments rather than being embedded directly into individual development workstations or applications. This provides a natural boundary for future routing, monitoring, model replacement, and distributed inference.</p>
+
+          <div class="mermaid">
+flowchart TD
+    DEV["Developer / AI Agent"]
+
+    subgraph PLATFORM["AI Engineering Platform"]
+        FORGE["Software Delivery<br>Gitea • Woodpecker CI"]
+        GATEWAY["AI Gateway<br>Ollama • Model Services"]
+        ENV["Development Environments<br>Isolated Linux VMs"]
+        OBS["Observability<br>Metrics • Logs • Monitoring<br>(Planned)"]
+    end
+
+    subgraph COMPUTE["Compute & Storage"]
+        GPU["GPU-Accelerated Inference"]
+        MODELS["Persistent Model Storage"]
+    end
+
+    HOST["Proxmox Virtualization Platform"]
+
+    DEV --> ENV
+    ENV --> FORGE
+    ENV --> GATEWAY
+    FORGE -->|"Build • Test • Validate"| ENV
+    GATEWAY --> GPU
+    GATEWAY --> MODELS
+    PLATFORM --> HOST
+    COMPUTE --> HOST
+    OBS -.->|"Planned"| FORGE
+    OBS -.->|"Planned"| GATEWAY
+    OBS -.->|"Planned"| ENV
+          </div>
+        </div>
+
+        <br>
+
+        <div id="design-tradeoffs">
+          <h2 class="bi bi-arrow-left-right text-primary">&nbsp; Design Tradeoffs</h2>
+          <br>
+          <div class="decision-list">
+            <p>Every architectural decision represents a tradeoff between competing priorities.</p>
+
+            <div class="decision-item">
+              <h4>Virtual Machines vs. Consolidated Services</h4>
+              <p>Running each major responsibility in a separate virtual machine introduces additional resource and administrative overhead compared with hosting every service on a single operating system. The isolation was intentional: source control and CI/CD, AI inference, and development environments have different resource requirements and upgrade cycles. Separating them creates stable service boundaries and allows individual components to evolve without destabilizing the rest of the platform.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Self-Hosted vs. Managed Services</h4>
+              <p>Managed source control, CI/CD, and AI services could significantly reduce the operational effort required to build the environment. Self-hosting was selected because the purpose of the lab is to understand and experiment with the complete engineering platform. Direct control over infrastructure also makes it possible to evaluate local inference, networking, storage, security, and resource allocation in ways that managed services would conceal.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Local Models vs. Frontier Models</h4>
+              <p>Local models provide control over data, predictable infrastructure costs, low-latency access, and the ability to execute workloads without depending on an external service. Frontier models provide substantially greater capability for difficult reasoning and complex software engineering tasks.</p>
+              <p>The lab is therefore not designed around the assumption that one approach should replace the other. Its longer-term architecture is intended to explore a hybrid model in which development workloads can be directed to an appropriate inference resource based on factors such as task complexity, quality requirements, privacy, latency, and cost.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Prototype Scale vs. Production Scale</h4>
+              <p>The initial environment runs on a single workstation with a dedicated high-memory GPU rather than beginning as a distributed compute cluster. This limits aggregate inference capacity but substantially reduces the complexity required to validate the architecture. The platform can therefore establish working service boundaries, storage strategies, development workflows, and routing concepts before those decisions are extended across additional GPU hosts.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Persistent Model Storage vs. VM Storage</h4>
+              <p>AI models represent large, relatively static assets with different lifecycle and capacity requirements from operating-system and application data. Model storage is therefore separated from the AI Gateway's system disk, allowing models to persist independently and making future storage expansion or migration less disruptive.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="lessons-learned">
+          <h2 class="bi bi-book text-primary">&nbsp; Lessons Learned</h2>
+          <div class="decision-list">
+            <div class="decision-item">
+              <h3>Infrastructure boundaries matter as much as model capability</h3>
+              <p>Early experimentation reinforced that running a model is only a small part of building a useful AI engineering environment. Storage, GPU access, networking, authentication, source control, CI/CD, and development isolation all become part of the architecture once AI is incorporated into a repeatable software engineering workflow.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>Build the platform incrementally</h3>
+              <p>Establishing each service independently before integrating the complete workflow made infrastructure problems significantly easier to isolate. Source control, CI/CD, webhook integration, GPU access, persistent storage, and model inference could each be validated before becoming dependencies of higher-level workflows.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>Self-hosting exposes architectural assumptions</h3>
+              <p>Managed platforms make many infrastructure decisions invisible. Building equivalent capabilities from individual components exposed assumptions about networking, persistence, service discovery, authentication, resource allocation, and failure boundaries that would otherwise remain hidden. Those constraints influenced the architecture of the platform as much as the choice of AI model.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>AI architecture should optimize the system, not the model</h3>
+              <p>The most capable model is not necessarily the appropriate model for every development task. A useful AI engineering platform must consider quality alongside latency, privacy, compute requirements, and cost. This shifts the architectural question from <i>"Which model should we use?"</i> to <i>"How should the system select and validate the appropriate capability for each workload?"</i></p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="current-status">
+          <h2 class="bi bi-activity text-primary">&nbsp; Current Status and Next Phase</h2>
+          <p>The core AI Engineering Lab is operational. The virtualization environment, isolated development systems, self-hosted source control, CI/CD pipeline, persistent model storage, and GPU-accelerated local inference have been implemented and validated.</p>
+          <p>The remaining infrastructure component is the observability layer, which will provide centralized visibility into service health, model workloads, resource utilization, logs, and eventually inference performance.</p>
+          <p>Once observability is in place, the next phase will extend the platform beyond infrastructure validation and into quantitative experimentation. Representative software engineering workloads will be evaluated across local models, frontier models, and hybrid routing strategies.</p>
+
+          <div class="decision-list">
+            <div class="decision-item">
+              <h3>Cost / Quality Evaluation</h3>
+              <p>The longer-term goal is to measure whether a hybrid AI architecture can preserve software quality while reducing dependence on frontier-model inference. Experiments will compare factors such as:</p>
+              <ul>
+                <li>Task completion quality</li>
+                <li>Execution time and latency</li>
+                <li>Local compute utilization</li>
+                <li>Frontier-model token consumption</li>
+                <li>Approximate cost</li>
+                <li>Success of automated validation through builds, tests, and CI/CD</li>
+              </ul>
+              <p>Rather than assuming that local or frontier models are universally preferable, the experiment is intended to identify the workloads for which each provides the strongest engineering tradeoff.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="conclusion">
+          <h2 class="bi bi-check2-circle text-primary">&nbsp; Conclusion</h2>
+          <p>The AI Engineering Lab began as an effort to create a controlled environment for experimenting with local AI-assisted software development, but its broader purpose is to explore how AI should fit into the architecture of modern software engineering.</p>
+          <p>The platform deliberately treats models as one component of a larger engineering system. Source control, continuous integration, automated validation, development environments, storage, compute, and eventually observability all participate in determining whether AI-generated work can be used reliably and economically.</p>
+          <p>The longer-term architecture does not assume that local models will replace frontier systems. Instead, it anticipates a heterogeneous environment in which different levels of AI capability are applied where they provide the greatest value, with conventional software engineering practices providing validation and control.</p>
+          <p>As the platform evolves toward distributed inference and workload routing, its central question remains consistent: <b>How can AI capability be integrated into the software engineering process to improve development speed and quality while using compute, cost, and human attention efficiently?</b></p>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="tech-stack">
+          <h2 class="bi bi-cpu text-primary">&nbsp; Technology Stack</h2>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">Proxmox VE</span>
+            <span class="badge rounded-pill project-tag">Ubuntu Server</span>
+            <span class="badge rounded-pill project-tag">Docker</span>
+            <span class="badge rounded-pill project-tag">Gitea</span>
+            <span class="badge rounded-pill project-tag">Woodpecker CI</span>
+            <span class="badge rounded-pill project-tag">PostgreSQL</span>
+            <span class="badge rounded-pill project-tag">Ollama</span>
+            <span class="badge rounded-pill project-tag">NVIDIA CUDA</span>
+            <span class="badge rounded-pill project-tag">RTX A6000</span>
+            <span class="badge rounded-pill project-tag">MermaidJS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Charles Almond</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charles-almond-49620810" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      securityLevel: "strict",
+      flowchart: {
+        curve: "basis",
+        htmlLabels: true
+      }
+    });
+  </script>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
