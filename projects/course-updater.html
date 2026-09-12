@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CourseUpdater | Charles Almond</title>
+  <meta name="description" content="CourseUpdater is a developer tool for safely distributing instructor-maintained files, tests, documentation, and CI/CD updates into student-owned Git repositories without overwriting student work.">
+  <meta name="keywords" content="">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="projects-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <div class="sitename">
+          <h1>Charles Almond</h1>
+          <h5>Designing systems that improve the way software is built.</h5>
+        </div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home<br></a></li>
+          <li><a href="index.html">Projects Overview<br></a></li>
+          <li><a href="course-updater.html" class="active">CourseUpdater<br></a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <section id="project-detail" class="project-detail section">
+      <div class="container section-title" data-aos="fade-up">
+        <h1 id="top" class="text-primary">CourseUpdater</h1>
+        <p>
+          Developer tooling for safely distributing instructor-maintained files, tests, documentation,
+          <br>
+          and CI/CD updates into student-owned Git repositories without overwriting student work.
+        </p>
+        <div class="mt-3">
+          <span class="badge rounded-pill project-tag">Developer Tooling</span>
+          <span class="badge rounded-pill project-tag">Open Source</span>
+          <span class="badge rounded-pill project-tag">.NET Reference Implementation</span>
+        </div>
+      </div>
+
+      <div class="container project-overview" data-aos="fade-up" data-aos-delay="100">
+        <div id="overview">
+          <div>
+            <h2 class="bi bi-card-list text-primary">&nbsp; Overview</h2>
+            <p>CourseUpdater is a lightweight developer-tooling project created to solve a practical repository-management problem in software engineering courses. Students begin with instructor-provided starter repositories, then own and modify their individual forks as their projects evolve. At the same time, the instructor may need to distribute new automated tests, CI/CD workflows, documentation updates, or other course-maintained files after those forks already exist.</p>
+            <p>The current implementation, <b>CourseUpdater.Net</b>, provides a .NET-based reference implementation of that workflow. Rather than synchronizing an entire repository, CourseUpdater applies targeted updates to files that remain under course control while preserving the parts of the repository that belong to the student.</p>
+            <p>This creates a clear ownership boundary: student work remains student-owned, while course infrastructure can continue to evolve throughout the semester.</p>
+
+            <div class="mt-3">
+              <a class="btn btn-outline-primary" href="https://github.com/calmond/CourseUpdater.Net" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>&nbsp; View CourseUpdater.Net on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="problem">
+          <h2 class="bi bi-exclamation-circle text-primary">&nbsp; Problem</h2>
+          <p>Fork-based classroom repositories work well when every required file is known before students begin. In practice, courses evolve. New tests may be introduced, CI workflows may need to change, documentation can improve, and a later lesson may depend on supporting files that did not exist when the original repository was forked.</p>
+          <p>Traditional Git synchronization can address some of these situations, but it also introduces complexity and the possibility of merge conflicts in repositories maintained by students who are still learning Git itself. A full repository synchronization can also blur an important distinction: some files belong to the student and should never be overwritten, while others remain part of the course delivery infrastructure.</p>
+          <p>The challenge was therefore not simply to copy files. The tool needed to provide a predictable, repeatable update mechanism that could change course-owned content without treating the entire student repository as instructor-controlled.</p>
+        </div>
+
+        <br>
+
+        <div id="solution">
+          <h2 class="bi bi-lightbulb text-primary">&nbsp; Solution</h2>
+          <p>CourseUpdater applies lesson-specific updates selectively rather than attempting to synchronize an entire repository. Each update can introduce the files needed for a particular lesson, including automated tests, GitHub Actions workflows, documentation, and other instructor-maintained resources.</p>
+          <p>Applied lessons are tracked inside the repository so that updates can be recognized as already installed. This makes the workflow easier to reason about and supports repeatable course delivery without requiring students to understand an upstream-merge strategy before they are ready for it.</p>
+          <p>The tool is intentionally small and purpose-built. It does not replace Git; instead, it works alongside Git by handling a narrowly defined responsibility: distributing course-maintained changes while respecting the ownership boundary around student code.</p>
+        </div>
+
+        <br>
+
+        <div id="update-architecture">
+          <h2 class="bi bi-diagram-3 text-primary">&nbsp; Update Architecture</h2>
+          <p>The central architectural idea is selective ownership. CourseUpdater treats the student repository as a shared space containing two different categories of content: files maintained by the course and files maintained by the student.</p>
+
+          <div class="mermaid">
+flowchart TD
+    COURSE["Course Repository"]
+    LESSON["Lesson Update Definition"]
+    UPDATER["CourseUpdater"]
+    STUDENT["Student-Owned Repository"]
+
+    COURSE --> LESSON
+    LESSON --> UPDATER
+    UPDATER --> STUDENT
+
+    subgraph MANAGED["Course-Maintained Content"]
+        TESTS["Automated Tests"]
+        CI["CI/CD Workflows"]
+        DOCS["Documentation"]
+        SUPPORT["Lesson Support Files"]
+    end
+
+    subgraph OWNED["Student-Maintained Content"]
+        CODE["Student Application Code"]
+        WORK["Student Project Work"]
+    end
+
+    UPDATER --> TESTS
+    UPDATER --> CI
+    UPDATER --> DOCS
+    UPDATER --> SUPPORT
+
+    TESTS --> STUDENT
+    CI --> STUDENT
+    DOCS --> STUDENT
+    SUPPORT --> STUDENT
+
+    CODE --> STUDENT
+    WORK --> STUDENT
+
+    UPDATER -.->|"Preserves ownership boundary"| OWNED
+          </div>
+
+          <p>The design intentionally avoids making CourseUpdater responsible for every possible repository state. Its responsibility is narrower: apply known course updates to known course-maintained locations while leaving student-owned work alone.</p>
+        </div>
+
+        <br>
+
+        <div id="design-tradeoffs">
+          <h2 class="bi bi-arrow-left-right text-primary">&nbsp; Design Decisions and Tradeoffs</h2>
+          <br>
+          <div class="decision-list">
+            <div class="decision-item">
+              <h4>Purpose-Built Updates vs. Upstream Git Merges</h4>
+              <p>Git already provides powerful mechanisms for synchronizing branches and upstream repositories. Those mechanisms are appropriate for experienced developers, but they also expose students to merge behavior that is unrelated to the learning objective of many assignments. CourseUpdater deliberately trades generality for predictability by applying narrowly scoped course updates instead of synchronizing repository history.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Selective Changes vs. Full Repository Synchronization</h4>
+              <p>Synchronizing a complete repository would be simpler conceptually, but it would also risk overwriting or conflicting with student work. CourseUpdater instead treats ownership as an architectural boundary. Course-maintained artifacts can evolve while application code written by the student remains outside the updater's responsibility.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Explicit Lesson State vs. Blind Reapplication</h4>
+              <p>Course updates are associated with lesson state so that an applied update can be recognized rather than repeatedly treated as new work. This makes the update process easier to inspect and reason about, particularly when students may run the tool more than once.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Simple Command-Line Tool vs. IDE-Specific Integration</h4>
+              <p>A command-line tool provides a common workflow across development environments and avoids coupling course delivery to a specific IDE. That is particularly valuable in courses where students may use Windows, macOS, or Linux and where the development environment can change from one course to another.</p>
+            </div>
+
+            <div class="decision-item">
+              <h4>Visible Automated Tests vs. Instructor-Only Validation</h4>
+              <p>Distributing automated tests with lesson updates allows students to see the same immediate technical feedback that participates in the development workflow. This supports a software-engineering model in which testing and CI/CD are part of normal development rather than mechanisms that appear only after submission.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="lessons-learned">
+          <h2 class="bi bi-book text-primary">&nbsp; Lessons Learned</h2>
+          <div class="decision-list">
+            <div class="decision-item">
+              <h3>Ownership boundaries simplify automation</h3>
+              <p>The most important design decision was identifying which parts of a repository the updater is allowed to change. Once that boundary is explicit, automation becomes safer and easier to explain because the tool does not need to make broad assumptions about the student's code.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>Developer tools should minimize incidental complexity</h3>
+              <p>The update mechanism exists to support the development exercise, not become an exercise of its own. Keeping the workflow small and predictable reduces the amount of Git and infrastructure knowledge required before students can focus on the software engineering concept being taught.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>Automation should remain inspectable</h3>
+              <p>For novice developers in particular, automation is more useful when its effects can be understood. Explicit lesson state and selective file updates make the process easier to troubleshoot than a more opaque synchronization mechanism.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>Educational tooling benefits from production engineering practices</h3>
+              <p>Although CourseUpdater was created for a classroom workflow, the underlying concerns are familiar software engineering problems: ownership, versioning, repeatability, idempotence, portability, and safe change management. Treating the classroom environment as an engineering system produced a more reusable solution than a one-off script.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="current-status">
+          <h2 class="bi bi-activity text-primary">&nbsp; Current Status</h2>
+          <p>The .NET implementation is operational and is being used to distribute lesson-specific updates in an ASP.NET Core course. The workflow has been used to add automated tests, GitHub Actions configuration, documentation updates, and lesson state to student repositories after the original starter project was created.</p>
+          <p>CourseUpdater.Net is maintained as a public repository so the implementation and workflow can evolve independently from any single course.</p>
+        </div>
+
+        <br>
+
+        <div id="next-phase">
+          <h2 class="bi bi-signpost-split text-primary">&nbsp; Next Phase: Cross-Platform Implementations</h2>
+          <p>CourseUpdater.Net currently serves as the reference implementation of the CourseUpdater workflow. The next phase is to separate the language-independent update model from implementation-specific concerns and produce additional implementations that fit naturally into other development environments.</p>
+          <p><b>Java is the first priority.</b> A Java course should not require students to install the .NET SDK solely to receive course updates, just as an ASP.NET Core course already has the .NET runtime available. A Java implementation would allow the updater to follow the development platform already required by the course.</p>
+
+          <div class="decision-list">
+            <div class="decision-item">
+              <h3>Shared behavior, platform-native implementations</h3>
+              <p>The long-term goal is not to create unrelated ports. Core concepts such as update definitions, ownership boundaries, lesson state, validation behavior, and file-update semantics should remain consistent across implementations while packaging and execution remain native to the target platform.</p>
+            </div>
+
+            <div class="decision-item">
+              <h3>CourseUpdater as a project family</h3>
+              <p>Under that model, <b>CourseUpdater</b> represents the shared workflow and design, <b>CourseUpdater.Net</b> remains the .NET reference implementation, and a future <b>CourseUpdater.Java</b> implementation provides equivalent behavior for Java-based courses.</p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="conclusion">
+          <h2 class="bi bi-check2-circle text-primary">&nbsp; Conclusion</h2>
+          <p>CourseUpdater began with a specific classroom problem, but the project is fundamentally about safe automation in a shared repository. Its design depends on making ownership explicit, applying narrowly scoped changes, and keeping automated behavior understandable to the developers who use it.</p>
+          <p>The project also demonstrates a broader engineering principle: a small, purpose-built tool can often provide a better experience than exposing every capability of a more general system. Git remains the source-control platform; CourseUpdater simply provides a controlled mechanism for the part of the workflow that Git alone does not make simple for this audience.</p>
+          <p>As additional implementations are developed, the architectural challenge becomes defining a stable CourseUpdater behavior that can remain consistent across technology stacks without forcing those stacks to share the same runtime.</p>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="tech-stack">
+          <h2 class="bi bi-cpu text-primary">&nbsp; Technology Stack</h2>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">C#</span>
+            <span class="badge rounded-pill project-tag">.NET</span>
+            <span class="badge rounded-pill project-tag">Git</span>
+            <span class="badge rounded-pill project-tag">GitHub</span>
+            <span class="badge rounded-pill project-tag">GitHub Actions</span>
+            <span class="badge rounded-pill project-tag">xUnit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer id="footer" class="footer accent-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Charles Almond</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charles-almond-49620810" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      securityLevel: "strict",
+      flowchart: {
+        curve: "basis",
+        htmlLabels: true
+      }
+    });
+  </script>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
