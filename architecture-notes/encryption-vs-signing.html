@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Encryption vs. Digital Signatures | Charles Almond</title>
+  <meta name="description" content="An architecture note explaining how encryption, hashing, and digital signatures solve different security problems involving confidentiality, integrity, and authenticity.">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <div class="sitename">
+			<h1>Charles Almond</h1>
+			<h5>Designing systems that improve the way software is built.</h5>
+		</div>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../index.html#hero">Home<br></a></li>
+          <li><a href="index.html">Architecture Notes</a></li>
+          <li><a href="encryption-vs-signing.html" class="active">Encryption vs. Signatures</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  
+  <main class="main">
+    <section id="architecture-note" class="project-detail section">
+      <div class="container section-title" data-aos="fade-up">
+        <h1 id="top" class="text-primary">Encryption vs. Digital Signatures</h1>
+        <p>Similar tools, different problems.</p>
+        <div class="mt-3">
+          <span class="badge rounded-pill project-tag">Security</span>
+          <span class="badge rounded-pill project-tag">Architecture</span>
+          <span class="badge rounded-pill project-tag">Cryptography</span>
+        </div>
+      </div>
+
+      <div class="container project-overview" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="project-detail-section">
+          <h3>Two Different Questions</h3>
+          <div class="border-top my-3"></div>
+          <p>
+            Encryption and digital signatures are often discussed together because both use cryptographic techniques,
+            and both may involve public and private keys. That similarity can make them seem like two versions of the
+            same idea, but they are'nt.
+          </p>
+          <p>
+            Encryption answers a confidentiality question: <b>Who is allowed to read this data?</b>
+            Digital signatures answer an authenticity and integrity question:
+            <b>Who produced this data, and has it changed since they signed it?</b>
+          </p>
+          <p>
+            Those are related security concerns, but they are different architectural requirements. Confusing them can
+            lead to systems that protect the wrong aspect.
+          </p>
+        </div>
+
+        <br>
+
+        <div class="project-section">
+          <h3>Encryption Protects Confidentiality</h3>
+          <p>
+            If the requirement is to prevent unauthorized people from reading information, encryption is the appropriate
+            tool. The original plaintext is transformed into ciphertext, and someone without the required key should not
+            be able to read the original data.
+          </p>
+          <p>
+            Symmetric encryption uses the same secret key for encryption and decryption. It is efficient and works well
+            when the communicating parties already have a secure way to share that secret. Its challenge is key
+            distribution: everyone who can decrypt the data must possess the secret key.  Sharing that securely is a challenge.
+          </p>
+          <p>
+            Asymmetric encryption separates those capabilities into a public key and a private key. Data encrypted for a
+            recipient can be protected using the recipient's public key and recovered using the corresponding private key.
+            This helps solve the key-distribution problem with symetric encryption, although public-key operations are 
+			generally not the mechanism used to encrypt large amounts of application data directly.
+          </p>
+
+          <div class="border-top my-3"></div>
+          <h5>Primary Security Property</h5>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">Confidentiality</span>
+            <span class="badge rounded-pill project-tag">Key Management</span>
+            <span class="badge rounded-pill project-tag">Access Control</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h3>Hashing Detects Change, but Does Not Prove Authorship</h3>
+          <p>
+            A cryptographic hash function, the same mechanism used to store passwords securely, produces a fixed-size digest 
+			from input data. If the input changes, the digest should change as well. This makes hashing useful for checking 
+			whether a file or message has been altered or is the same as the original.
+          </p>
+          <p>
+            That is why software vendors often publish checksums for downloads. If the hash you calculate matches the hash
+            published by a trusted source, you have evidence that the file you received is the same file represented by
+            that published value.
+          </p>
+          <p>
+            A hash by itself does not prove who created the file. Anyone who can modify the file could also calculate a
+            new hash. Integrity only becomes meaningful when the expected digest is obtained through a channel you trust.
+          </p>
+
+          <div class="border-top my-3"></div>
+          <h5>Primary Security Property</h5>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">Integrity Checking</span>
+            <span class="badge rounded-pill project-tag">Change Detection</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h3>Digital Signatures Add Identity to Integrity</h3>
+          <p>
+            A digital signature combines hashing with asymmetric cryptography. The signer creates a digest of the data and
+            uses a private signing key to produce a signature associated with that digest. Someone with the corresponding
+            public key can verify the signature.
+          </p>
+          <p>
+            Successful verification provides two important pieces of evidence: the data has not changed since it was
+            signed, and the signature was produced using the private key associated with the public key used for
+            verification.
+          </p>
+          <p>
+            Notice what is <em>not</em> happening: the original data does not have to be hidden. A signed driver,
+            executable, package, or operating-system update can remain completely visible while still allowing the
+            recipient to verify its origin and integrity.
+          </p>
+
+          <div class="border-top my-3"></div>
+          <h5>Primary Security Properties</h5>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">Authenticity</span>
+            <span class="badge rounded-pill project-tag">Integrity</span>
+            <span class="badge rounded-pill project-tag">Identity</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h3>The Direction of Trust Is Different</h3>
+          <p>
+            One useful way to separate the two concepts is to ask which key operation must remain private.
+          </p>
+          <p>
+            With public-key encryption, a sender can use the recipient's public key to protect information intended for
+            that recipient. The recipient's private key enables recovery of the plaintext. The private capability belongs
+            to the person who is allowed to read the message.
+          </p>
+          <p>
+            With a digital signature, the signer uses a private key to create the signature, while anyone who has the
+            corresponding public key can verify it. The private capability belongs to the person or organization making
+            the claim of authorship.
+          </p>
+          <p>
+            The algorithms may come from the same family of cryptographic ideas, but the system is solving a different
+            trust problem.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h3>Real Systems Often Need Both</h3>
+          <p>
+            Confidentiality, integrity, and authenticity are separate requirements, so a system may need more than one
+            mechanism. A message can be encrypted so unauthorized parties cannot read it and also signed so the recipient
+            can verify its origin and detect tampering.
+          </p>
+          <p>
+            The important architectural habit is to identify the security requirement first and then choose the mechanism.
+            Starting with the technology instead of the requirement makes it easy to assume that "using cryptography"
+            automatically solves every security problem.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h3>A Practical Example: Software Updates</h3>
+          <p>
+            Software updates are a useful example because confidentiality is usually not the primary concern. Everyone may
+            be allowed to download the update. What matters is whether the package actually came from the expected vendor
+            and whether it was modified after publication.
+          </p>
+          <p>
+            That is a signature problem. The software can remain public while the signature provides a mechanism for
+            verifying authenticity and integrity before installation.
+          </p>
+          <p>
+            Encrypting the update would solve a different problem: it would restrict who could read the package. Unless
+            secrecy is actually required, that additional property does not address the main risk.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h3>Architectural Takeaway</h3>
+          <p>
+            Security controls should map to specific security properties. Encryption protects confidentiality. Hashing
+            helps detect change. Digital signatures combine integrity checking with a verifiable claim tied to a signing
+            key. Certificates and trust infrastructure then help answer another question: whether the public key itself
+            belongs to the identity you think it does.
+          </p>
+          <p>
+            The technologies are related, but the design questions are distinct. A secure architecture begins by asking
+            what must be protected and from whom.
+          </p>
+
+          <div class="border-top my-3"></div>
+          <div class="project-meta">
+            <span class="badge rounded-pill project-tag">Confidentiality ≠ Authenticity</span>
+            <span class="badge rounded-pill project-tag">Start With the Requirement</span>
+            <span class="badge rounded-pill project-tag">Design for Explicit Trust</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Charles Almond</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/charles-almond-49620810" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
